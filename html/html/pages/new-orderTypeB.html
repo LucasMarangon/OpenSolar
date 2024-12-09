@@ -1,0 +1,1932 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="">
+    <title> Nova proposta - Sunhub</title>
+
+    <!-- Flaticon -->
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+    <!-- Favicon -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- ChartJS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+
+    <!-- Slick -->
+    <link rel="stylesheet" href="../libs/slick/slick.css" type="text/css">
+
+    <!-- Main style file -->
+    <link rel="stylesheet" href="../css/app.css" type="text/css">
+    <link rel="stylesheet" href="../css/new-quote.css" type="text/css">
+    <link rel="stylesheet" href="../css/sunhub-styles.css" type="text/css">
+
+    <!-- Google maps -->
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=&loading=async&libraries=places&callback=initMap">
+    </script>
+    <script src="../js/quote.js"></script>
+    
+
+    </head>
+<body>
+<!-- preloader -->
+<div class="preloader">
+    <img src="../logo.png" alt="logo">
+    <div class="preloader-icon"></div>
+</div>
+<!-- ./ preloader -->
+
+<!-- sidebars -->
+
+<!-- notifications sidebar -->
+<div class="sidebar" id="notifications">
+    <div class="sidebar-header d-block align-items-end">
+        <div class="align-items-center d-flex justify-content-between py-4">
+            Notificações
+            <button data-sidebar-close>
+                <i class="bi bi-arrow-right"></i>
+            </button>
+        </div>
+        <ul class="nav nav-pills">
+            <li class="nav-item">
+                <a class="nav-link active nav-link-notify" data-bs-toggle="tab" href="#activities">Atividades</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#notes">Notas</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="tab" href="#alerts">Alertas</a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-content">
+        <div class="tab-content">
+            <div class="tab-pane active" id="activities">
+                <div class="tab-pane-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="px-0 list-group-item">
+                            <a href="#" class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-info me-3">
+                                            <span class="avatar-text rounded-circle">
+                                                <i class="bi bi-person"></i>
+                                            </span>
+                                    </figure>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 fw-bold d-flex justify-content-between">
+Você foi adicionado a uma equipe
+                                    </p>
+                                    <span class="text-muted small">
+                                        <i class="bi bi-clock me-1"></i> Hoje
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <a href="#" class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-success me-3">
+                                            <span class="avatar-text rounded-circle">
+                                                <i class="bi bi-filetype-xlsx"></i>
+                                            </span>
+                                    </figure>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 fw-bold d-flex justify-content-between">
+Sua importação foi concluída                                    </p>
+                                    <span class="text-muted small">
+                                        <i class="bi bi-clock me-1"></i> Hoje
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <a href="#" class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-secondary me-3">
+                                            <span
+                                                class="avatar-text rounded-circle">
+                                                <i class="bi bi-file-text"></i>
+                                            </span>
+                                    </figure>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 d-flex justify-content-between">
+uma pessoa anexou um arquivo em seu cliente                                    </p>
+                                    <span class="text-muted small">
+                                        <i class="bi bi-clock me-1"></i> Ontem
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <a href="#" class="d-flex">
+                                <div class="flex-shrink-0">
+                                    <figure class="avatar avatar-success me-3">
+                                            <span class="avatar-text rounded-circle">
+                                                <i class="bi bi-download"></i>
+                                            </span>
+                                    </figure>
+                                </div>
+                                <div class="flex-grow-1">
+                                    <p class="mb-0 d-flex justify-content-between">
+                                        Relatórios prontos para Download
+                                    </p>
+                                    <span class="text-muted small">
+                                        <i class="bi bi-clock me-1"></i> Ontem
+                                    </span>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane-footer">
+                    <a href="#" class="btn btn-success">
+                        <i class="bi bi-check2 me-2"></i> Marcar como lidos
+                    </a>
+                    <a href="#" class="btn btn-danger ms-2">
+                        <i class="bi bi-trash me-2"></i> Deletar
+                    </a>
+                </div>
+            </div>
+            <div class="tab-pane" id="notes">
+                <div class="tab-pane-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="px-0 list-group-item">
+                            <p class="mb-0 fw-bold text-success d-flex justify-content-between">
+                                Relatório finalizado e enviado.
+                            </p>
+                            <span class="text-muted small">
+                                <i class="bi bi-clock me-1"></i> Hoje
+                            </span>
+                            <div class="mt-2">
+                                <a href="#">Editar</a>
+                                <a href="#" class="text-danger ms-2">Excluir</a>
+                            </div>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <p class="mb-0 fw-bold text-success d-flex justify-content-between">
+                                Email enviado
+                            </p>
+                            <span class="text-muted small">
+                                <i class="bi bi-clock me-1"></i> Hoje
+                            </span>
+                            <div class="mt-2">
+                                <a href="#">Editar</a>
+                                <a href="#" class="text-danger ms-2">Excluir</a>
+                            </div>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <p class="mb-0 d-flex justify-content-between">
+                                Visita realizada.
+                            </p>
+                            <span class="text-muted small">
+                                <i class="bi bi-clock me-1"></i> Ontem
+                            </span>
+                            <div class="mt-2">
+                                <a href="#">Editar</a>
+                                <a href="#" class="text-danger ms-2">Excluir</a>
+                            </div>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <p class="mb-0 fw-bold text-success d-flex justify-content-between">
+                                Cliente ciente do prazo da obra.
+                            </p>
+                            <span class="text-muted small">
+                                <i class="bi bi-clock me-1"></i> Ontem
+                            </span>
+                            <div class="mt-2">
+                                <a href="#">Editar</a>
+                                <a href="#" class="text-danger ms-2">Excluir</a>
+                            </div>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <p class="mb-0 fw-bold text-warning d-flex justify-content-between">
+                                Consultor, verifique informações no card.
+                            </p>
+                            <span class="text-muted small">
+                                <i class="bi bi-clock me-1"></i> 20 minutos atrás
+                            </span>
+                            <div class="mt-2">
+                                <a href="#">Editar</a>
+                                <a href="#" class="text-danger ms-2">Excluir</a>
+                            </div>
+                        </li>
+                        <li class="px-0 list-group-item">
+                            <p class="mb-0 d-flex justify-content-between">
+                                Forma de pagamento será financiamento.
+                            </p>
+                            <span class="text-muted small">
+                                <i class="bi bi-clock me-1"></i> 20 minutos atrás
+                            </span>
+                            <div class="mt-2">
+                                <a href="#">Editar</a>
+                                <a href="#" class="text-danger ms-2">Excluir</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane-footer">
+                    <a href="#" class="btn btn-primary btn-block">
+                        <i class="bi bi-plus me-2"></i> Adicionar anotações
+                    </a>
+                </div>
+            </div>
+            <div class="tab-pane" id="alerts">
+                <div class="tab-pane-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="px-0 list-group-item d-flex">
+                            <div class="flex-shrink-0">
+                                <figure class="avatar avatar-warning me-3">
+                                        <span class="avatar-text rounded-circle">
+                                            <i class="bi bi-lock"></i>
+                                        </span>
+                                </figure>
+                            </div>
+                            <div class="flex-grow-1">
+                                <p class="mb-0 fw-bold d-flex justify-content-between">
+                                    Login com dispositivo diferente.
+                                </p>
+                                <span class="text-muted small">
+                                        <i class="bi bi-clock me-1"></i> Ontem
+                                    </span>
+                            </div>
+                        </li>
+                        <li class="px-0 list-group-item d-flex">
+                            <div class="flex-shrink-0">
+                                <figure class="avatar avatar-warning me-3">
+                                        <span class="avatar-text fw-bold rounded-circle">
+                                            <i class="bi bi-file-text"></i>
+                                        </span>
+                                </figure>
+                            </div>
+                            <div class="flex-grow-1">
+                                <p class="mb-0 fw-bold d-flex justify-content-between">
+                                    Suas informações de faturamento estão inativas.
+                                </p>
+                                <span class="text-muted small">
+                                        <i class="bi bi-clock me-1"></i> Ontem
+                                    </span>
+                            </div>
+                        </li>
+                        <li class="px-0 list-group-item d-flex">
+                            <div class="flex-shrink-0">
+                                <figure class="avatar avatar-warning me-3">
+                                        <span class="avatar-text rounded-circle">
+                                            <i class="bi bi-person"></i>
+                                        </span>
+                                </figure>
+                            </div>
+                            <div class="flex-grow-1">
+                                <p class="mb-0 d-flex justify-content-between">
+                                    Um usuário foi inativado.
+                                </p>
+                                <span class="text-muted small">
+                                        <i class="bi bi-clock me-1"></i> Hoje
+                                    </span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="tab-pane-footer">
+                    <a href="#" class="btn btn-success">
+                        <i class="bi bi-check2 me-2"></i> Marcar como lidos
+                    </a>
+                    <a href="#" class="btn btn-danger ms-2">
+                        <i class="bi bi-trash me-2"></i> Deletar
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ./ notifications sidebar -->
+
+<!-- settings sidebar -->
+<div class="sidebar" id="settings">
+    <div class="sidebar-header">
+        <div>
+            <i class="bi bi-gear me-2"></i>
+            Settings
+        </div>
+        <button data-sidebar-close>
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+    <div class="sidebar-content">
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault1" checked>
+                    <label class="form-check-label" for="flexCheckDefault1">
+                        Remember next visits
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault2" checked>
+                    <label class="form-check-label" for="flexCheckDefault2">
+                        Enable report generation.
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault3" checked>
+                    <label class="form-check-label" for="flexCheckDefault3">
+                        Allow notifications.
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault4">
+                    <label class="form-check-label" for="flexCheckDefault4">
+                        Hide user requests
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault5" checked>
+                    <label class="form-check-label" for="flexCheckDefault5">
+                        Speed up demands
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item px-0 border-0">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                        Hide menus
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-action">
+        <a href="#" class="btn btn-primary">All Settings</a>
+    </div>
+</div>
+<!-- ./ settings sidebar -->
+
+<!-- search sidebar -->
+<div class="sidebar" id="search">
+    <div class="sidebar-header">
+        Search
+        <button data-sidebar-close>
+            <i class="bi bi-arrow-right"></i>
+        </button>
+    </div>
+    <div class="sidebar-content">
+        <form class="mb-4">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search" aria-describedby="button-search-addon">
+                <button class="btn btn-outline-light" type="button" id="button-search-addon">
+                    <i class="bi bi-search"></i>
+                </button>
+            </div>
+        </form>
+        <h6 class="mb-3">Last searched</h6>
+        <div class="mb-4">
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-search"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Reports for 2021</a>
+                <a href="#" class="btn text-danger btn-sm" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-search"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Current users</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-search"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Meeting notes</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+        </div>
+        <h6 class="mb-3">Recently viewed</h6>
+        <div class="mb-4">
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-secondary avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-check-circle"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Todo list</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-warning avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-people"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Pricing table</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-info avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-gear"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Settings</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+            <div class="d-flex align-items-center mb-3">
+                <a href="#" class="avatar avatar-success avatar-sm me-3">
+                        <span class="avatar-text rounded-circle">
+                            <i class="bi bi-person-circle"></i>
+                        </span>
+                </a>
+                <a href="#" class="flex-fill">Users</a>
+                <a href="#" class="btn" data-bs-toggle="tooltip" title="Remove">
+                    <i class="bi bi-x"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="sidebar-action">
+        <a href="#" class="btn btn-danger">All Clear</a>
+    </div>
+</div>
+<!-- ./ search sidebar -->
+
+<!-- ./ sidebars -->
+
+<!-- menu -->
+<div class="menu">
+    <div class="menu-header">
+        <a href="./dashboard.html" class="menu-header-logo">
+            <img src="../logo.png" alt="logo">
+            <span>Sunhub</span>
+        </a>
+        <a href="#" class="btn btn-sm menu-close-btn">
+            <i class="bi bi-x"></i>
+        </a>
+    </div>
+    <div class="menu-body">
+        <div class="dropdown">
+            <a href="#" class="d-flex align-items-center" data-bs-toggle="dropdown">
+                <div class="avatar me-3">
+                    <img src="../images/user/user.png"
+                         class="rounded-circle" alt="image">
+                </div>
+                <div>
+                    <div class="fw-bold">Matheus S.</div>
+                    <small class="text-muted">Admin</small>
+                </div>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end">
+                <a href="#" class="dropdown-item d-flex align-items-center">
+                    <i class="bi bi-person dropdown-item-icon"></i> Profile
+                </a>
+                <a href="#" class="dropdown-item d-flex align-items-center">
+                    <i class="bi bi-envelope dropdown-item-icon"></i> Inbox
+                </a>
+                <a href="#" class="dropdown-item d-flex align-items-center" data-sidebar-target="#settings">
+                    <i class="bi bi-gear dropdown-item-icon"></i> Settings
+                </a>
+                <a href="./login.html" class="dropdown-item d-flex align-items-center text-danger"
+                   target="_blank">
+                    <i class="bi bi-box-arrow-right dropdown-item-icon"></i> Logout
+                </a>
+            </div>
+        </div>
+        <ul>
+            <li class="menu-divider">Geração de proposta</li>
+            <li>
+                <a  href="./dashboard.html">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-bar-chart"></i>
+                    </span>
+                    <span>Dashboard</span>
+                </a>
+            </li>
+            <li>
+                <a class="active" href="#">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-file-earmark-text"></i>
+                    </span>
+                    <span>Propostas</span>
+                </a>
+                <ul>
+                    <li>
+                        <a  href="./orders.html">Lista</a>
+                    </li>
+                    <li>
+                        <a  href="./order-detail.html">Detalhadas</a>
+                    </li>
+                    <li>
+                        <a  href="./order-detail.html">Produtos</a>
+                    </li>
+                    <li>
+                        <a  href="./order-detail.html">Nova proposta</a>
+                    </li>
+
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-diagram-3"></i>
+                    </span>
+                    <span>Kanban</span>
+                </a>
+                <ul>
+                    <li>
+                        <a  href="./product-list.html">Comercial</a>
+                    </li>
+                    <li>
+                        <a  href="./product-grid.html">Projetos</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-people"></i>
+                    </span>
+                    <span>Clientes</span>
+                </a>
+                <ul>
+                    <li>
+                        <a  href="./buyer-dashboard.html">Pessoa física</a>
+                    </li>
+                    <li>
+                        <a  href="./buyer-orders.html">Pessoa jurídica</a>
+                    </li>
+                    <li>
+                        <a  href="./buyer-addresses.html">Todos</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a  href="./customers.html">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-calendar-plus"></i>
+                    </span>
+                    <span>Agenda</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <span class="nav-link-icon">
+                        <i class="bi bi-gear"></i>
+                    </span>
+                    <span>Configurações</span>
+                </a>
+                <ul>
+                    <li>
+                        <a href="./invoices.html" >Perfis de usuário</a>
+                    </li>
+                    <li>
+                        <a href="./invoice-detail.html" >Gerais</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- ./  menu -->
+
+<!-- layout-wrapper -->
+<div class="layout-wrapper">
+
+    <!-- header -->
+    <div class="header">
+    <div class="menu-toggle-btn"> <!-- Menu close button for mobile devices -->
+        <a href="#">
+            <i class="bi bi-list"></i>
+        </a>
+    </div>
+    <!-- Logo -->
+    <a href="./dashboard.html" class="logo">
+        <img width="100" src="../logo.png" alt="logo">
+    </a>
+    <!-- ./ Logo -->
+    <div class="page-title">Geração de proposta</div>
+    <form class="search-form">
+        <div class="input-group">
+            <button class="btn btn-outline-light" type="button" id="button-addon1">
+                <i class="bi bi-search"></i>
+            </button>
+            <input type="text" class="form-control" placeholder="Buscar..."
+                   aria-label="Example text with button addon" aria-describedby="button-addon1">
+            <a href="#" class="btn btn-outline-light close-header-search-bar">
+                <i class="bi bi-x"></i>
+            </a>
+        </div>
+    </form>
+    <div class="header-bar ms-auto">
+        <ul class="navbar-nav justify-content-end">
+            <li class="nav-item">
+                <a href="#" class="nav-link nav-link-notify" data-count="2" data-sidebar-target="#notifications">
+                    <i class="bi bi-bell icon-lg"></i>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a href="#" class="nav-link nav-link-notify" data-count="3" data-bs-toggle="dropdown">
+                    <i class="bi bi-link-45deg"></i>
+                </a>
+                <div class="dropdown-menu dropdown-menu-lg dropdown-menu-end p-0">
+                    <h6 class="m-0 px-4 py-3 border-bottom">Documentos visualizados</h6>
+                    <div class="dropdown-menu-body">
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex align-items-center">
+                                <a href="#" class="text-danger me-3" title="Remove">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                                <a href="#" class="me-3 flex-shrink-0 ">
+                                    <img src="../images/products/quote.png" class="rounded" width="60"
+                                         alt="...">
+                                </a>
+                                <div>
+                                    <h6>Proposta residencial</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex align-items-center">
+                                <a href="#" class="text-danger me-3" title="Remove">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                                <a href="#" class="me-3 flex-shrink-0 ">
+                                    <img src="../images/products/quote.png" class="rounded" width="60"
+                                         alt="...">
+                                </a>
+                                <div>
+                                    <h6>Industrial</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex align-items-center">
+                                <a href="#" class="text-danger me-3" title="Remove">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                                <a href="#" class="me-3 flex-shrink-0 ">
+                                    <img src="../images/products/quote.png" class="rounded" width="60"
+                                         alt="...">
+                                </a>
+                                <div>
+                                    <h6>Rural</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-group list-group-flush">
+                            <div class="list-group-item d-flex align-items-center">
+                                <a href="#" class="text-danger me-3" title="Remove">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                                <a href="#" class="me-3 flex-shrink-0 ">
+                                    <img src="../images/products/quote.png" class="rounded" width="60"
+                                         alt="...">
+                                </a>
+                                <div>
+                                    <h6>Comercial</h6>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item ms-3">
+                    <button class="btn btn-primary btn-icon" onclick="request_quote_HTML()">
+                        <strong><i class="bi bi-floppy"></i></strong>
+                        <strong>Salvar</strong>
+    </button>
+            </li>
+        </ul>
+    </div>
+    <!-- Header mobile buttons -->
+    <div class="header-mobile-buttons">
+        <a href="#" class="search-bar-btn">
+            <i class="bi bi-search"></i>
+        </a>
+        <a href="#" class="actions-btn">
+            <i class="bi bi-three-dots"></i>
+        </a>
+    </div>
+    <!-- ./ Header mobile buttons -->
+</div>
+    <!-- ./ header -->
+
+    <!-- content -->
+
+
+        <div class="quote-content">
+
+
+            <!-- Absolute positioned address input -->
+
+
+
+
+            <div class="quote-input-row">
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Endereço</label><br>
+                    </div>
+                    <div class="quote-input-content">
+                        <i class="bi bi-geo-alt"></i>
+                        <input type="text" class="quote-input" placeholder="Local da instalação" id="addressInput">
+                        <button class="map-button" onclick="display_map()">
+                            <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" height="20" width="20">                    
+                        </button>
+                    </div>
+                </div>
+
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Taxa de Irradiação</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-sun"></i>
+                        <input type="number" class="quote-input" id="irradiationValue" value="4.9">
+                    </div>
+                </div>
+                <!-- <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Modalidade</label><br>
+                    </div>
+                    <div class="quote-input-content">
+                        <i class="bi bi-lightning-charge"></i>                    
+                        <select class="quote-select">
+                            <option>Convencional</option>
+                            <option>Branca</option>
+                        </select>
+                    </div>
+                </div>  Div pronta caso precise recolocar esse campo na proposta.  -->
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Orientação do telhado</label><br>
+                    </div>
+                    <div class="quote-input-content">
+                        <i class="bi bi-compass"></i>                    
+                        <select class="quote-select" id="roofOrientation" onchange="change_performance_rate()">
+                            <option>Norte</option>
+                            <option>Sul</option>
+                            <option>Leste</option>
+                            <option>Oeste</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Taxa de desempenho</label><br>
+                    </div>
+                    <div class="quote-input-content">
+                        <i class="bi bi-speedometer2"></i>                    
+                        <input type="text" class="quote-input" placeholder="Taxa de desempenho" id="performanceRate" value="0.8">
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="quote-input-row">
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Concessionária</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                    <i class="bi bi-lightbulb"></i>                    
+                        <select class="quote-select" id="energyDealership" onchange="change_fees()">
+                            <option>Selecione</option>
+                            <option>Amazonas Energia</option>
+                            <option>Castro-DIS</option>
+                            <option>CEA Equatorial</option>
+                            <option>Cedrap</option>
+                            <option>Cedri</option>
+                            <option>CEEE Equatorial</option>
+                            <option>CEGERO</option>
+                            <option>Cejama</option>
+                            <option>Celesc-DIS</option>
+                            <option>CELETRO</option>
+                            <option>Cemig-D</option>
+                            <option>Cemirim</option>
+                            <option>Ceprag</option>
+                            <option>Ceraça</option>
+                            <option>Ceral Anitápolis</option>
+                            <option>Ceral Araruama</option>
+                            <option>Ceral DIS</option>
+                            <option>Cerbranorte</option>
+                            <option>CERCI</option>
+                            <option>Cercos</option>
+                            <option>Cerej</option>
+                            <option>Ceres</option>
+                            <option>CERFOX</option>
+                            <option>Cergal</option>
+                            <option>Cergapa</option>
+                            <option>Cergral</option>
+                            <option>Ceriluz</option>
+                            <option>Cerim</option>
+                            <option>Ceripa</option>
+                            <option>Ceris</option>
+                            <option>CERMC</option>
+                            <option>Cermissões</option>
+                            <option>Cermoful</option>
+                            <option>Cernhe</option>
+                            <option>Cerpalo</option>
+                            <option>Cerpro</option>
+                            <option>CERRP</option>
+                            <option>Cersad</option>
+                            <option>Cersul</option>
+                            <option>Certaja</option>
+                            <option>Certel</option>
+                            <option>CERTHIL</option>
+                            <option>Certrel</option>
+                            <option>CERVAM</option>
+                            <option>Cetril</option>
+                            <option>Chesp</option>
+                            <option>Cocel</option>
+                            <option>Codesam</option>
+                            <option>Coopera</option>
+                            <option>Cooperaliança</option>
+                            <option>Coopercocal</option>
+                            <option>Cooperluz</option>
+                            <option>Coopermila</option>
+                            <option>COOPERNORTE</option>
+                            <option>COOPERSUL</option>
+                            <option>COOPERZEM</option>
+                            <option>Coorsel</option>
+                            <option>Copel-DIS</option>
+                            <option>Coprel</option>
+                            <option>CPFL Paulista</option>
+                            <option>CPFL Piratininga</option>
+                            <option>CPFL Santa Cruz (agrupada)</option>
+                            <option>Creluz-D</option>
+                            <option>Creral</option>
+                            <option>Dcelt</option>
+                            <option>Demei</option>
+                            <option>DMED</option>
+                            <option>EDP ES</option>
+                            <option>EDP SP</option>
+                            <option>EFLJC</option>
+                            <option>Eflul</option>
+                            <option>Eletrocar</option>
+                            <option>ELFSM</option>
+                            <option>Enel CE</option>
+                            <option>Enel GO</option>
+                            <option>Enel RJ</option>
+                            <option>Enel SP</option>
+                            <option>Energisa AC</option>
+                            <option>Energisa Borborema</option>
+                            <option>Energisa MG</option>
+                            <option>Energisa MS</option>
+                            <option>Energisa MT</option>
+                            <option>Energisa Nova Friburgo</option>
+                            <option>Energisa PB</option>
+                            <option>Energisa RO</option>
+                            <option>Energisa SE</option>
+                            <option>Energisa TO</option>
+                            <option>Equatorial AL</option>
+                            <option>Equatorial MA</option>
+                            <option>Equatorial PA</option>
+                            <option>Equatorial PI</option>
+                            <option>Equatorial RN</option>
+                            <option>Equatorial SC</option>
+                            <option>Equatorial SA</option>
+                            <option>ESE</option>
+                            <option>Furnas</option>
+                            <option>Germano</option>
+                            <option>Gerusa</option>
+                            <option>Gesel</option>
+                            <option>Gerop</option>
+                            <option>Getel</option>
+                            <option>GVE</option>
+                            <option>Igreja Nova</option>
+                            <option>Iguaçu</option>
+                            <option>Imepac</option>
+                            <option>Imet</option>
+                            <option>Independente</option>
+                            <option>Itaipu</option>
+                            <option>JUPI</option>
+                            <option>Lerner</option>
+                            <option>Luzh</option>
+                            <option>Luzplan</option>
+                            <option>Luzvivo</option>
+                            <option>Luzmar</option>
+                            <option>Magau</option>
+                            <option>Metropar</option>
+                            <option>Miracema</option>
+                            <option>Monassu</option>
+                            <option>Monte Alto</option>
+                            <option>Mundaka</option>
+                            <option>Norte Fluminense</option>
+                            <option>Nordeste</option>
+                            <option>Norte Maranhao</option>
+                            <option>Parana</option>
+                            <option>Paranapanema</option>
+                            <option>Piauí</option>
+                            <option>Planalto</option>
+                            <option>Porto Real</option>
+                            <option>PPM</option>
+                            <option>Pampa</option>
+                            <option>Prata</option>
+                            <option>Rio Claro</option>
+                            <option>S. Antonio Energia</option>
+                            <option>Santa Cruz</option>
+                            <option>São Gabriel</option>
+                            <option>São João</option>
+                            <option>São Miguel</option>
+                            <option>São Paulo</option>
+                            <option>Serrana</option>
+                            <option>Sevale</option>
+                            <option>Soma</option>
+                            <option>Sudoeste</option>
+                            <option>Sulgipe</option>
+                            <option>Sudeste</option>
+                            <option>Sudoeste Capixaba</option>
+                            <option>Santos Dumont</option>
+                            <option>Suldeste</option>
+                            <option>Tocantins</option>
+                            <option>Vale do Paraíba</option>
+                            <option>Vallon</option>
+                            <option>Vermelha</option>
+                            <option>Viana</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Tipo de instalação</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-wrench"></i>                    
+                        <select onchange="change_simultaneous_rate()" id="installationType" class="quote-select">
+                            <option>Selecione</option>
+                            <option>Residencial</option>
+                            <option>Comercial</option>
+                            <option>Rural</option>
+                            <option>Industrial</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Taxa de Simultaneidade</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-bar-chart"></i>
+                        <input type="number" class="quote-input" id="simultaneousRate" placeholder="0">
+                        <i class="bi bi-percent"></i>
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Tipo de estrutura</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-bricks"></i>                    
+                        <select class="quote-select">
+                            <option>Selecione</option>
+                            <option>Cerâmica</option>
+                            <option>Solo</option>
+                            <option>Fibrocimento</option>
+                            <option>Fibrometal</option>
+                            <option>Laje</option>
+                            <option>Metálica</option>
+                            <option>Mini trilho</option>
+                    </select>
+                    </div>
+                </div>
+
+              
+            </div>
+            <div class="quote-input-row">
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Padrão de entrada</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-outlet"></i>
+                        <select class="quote-select">
+                            <option>Selecione</option>
+                            <option>Monofásico</option>
+                            <option>Bifásico</option>
+                            <option>Trifásico</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Iluminação pública</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-file-spreadsheet"></i>                    
+                        <input type="text" class="quote-input" placeholder="R$ 0,00" oninput="format_currency(this)">
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Tarifa de energia</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-cash-coin"></i>
+                        <input type="text" class="quote-input" placeholder="R$ 0,00" id="energyCost" oninput="format_currency(this)">
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">TUSD Fio B</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-cash"></i>
+                        <input type="text" class="quote-input" placeholder="R$ 0,00" id="tusdFIOB" oninput="format_currency(this)">
+                    </div>
+                </div>
+                
+            </div>
+
+            <div class="quote-input-row">
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Custos adicionais da Fatura</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-cash-stack"></i>
+                        <input type="text" class="quote-input" placeholder="R$ 0,00" oninput="format_currency(this)">
+                    </div>
+                </div>
+                
+                
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Consumo médio mensal</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-battery-charging"></i>
+                        <input type="number" class="quote-input" id="averageConsumption" placeholder="kWh" onchange="calculate_power(this), generate_chart()" oninput="calculate_power(this)">
+                    </div>
+                </div>
+                <div class="quote-input-container-switch">
+                    <span class="switch-text">Preencher mês a mês?</span>
+                    <div class="quote-switch-container" id="MonthToMonthButton" onclick="toogle_switch(this); show_months(this)">
+                        <div class="quote-switch-circle" id="inactive-switch"></div>
+                    </div>
+                </div>
+                <div class="quote-input-container-switch">
+                    <span></span>
+                </div>
+
+
+            </div>
+        
+            <div class="quote-input-row">
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Potência dos módulos</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="fi fi-rr-solar-panel"></i>                    
+                        <select class="quote-select" onchange="calculate_modulus()" id="modulusPower">
+                            <option>Selecione</option>
+                            <option>550W</option>
+                            <option>575W</option>
+                            <option>585W</option>
+                            <option>600W</option>
+                            <option>610W</option>
+                            <option>650W</option>
+                            <option>690W</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Potência desejada</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="fi fi-rr-research-arrows-circle"></i>                    
+                        <input type="text" class="quote-input" placeholder="kWp" id="adequatePower" onchange="calculate_modulus()" oninput="calculate_modulus()">
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Quantidade de módulos</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="fi fi-rr-solar-panel-sun"></i>
+                        <input type="number" class="quote-input" placeholder="Un" id="modulusQuantity">
+                    </div>
+                </div>
+
+                <div class="quote-input-container" style="border: none; box-shadow: none;">
+                    <div class="label-container">
+                        <label for=""></label><br>
+                    </div>
+                    <div class="quote-input-content" style="border: none; box-shadow: none;">                    
+                        <button class="quote-button" onclick="generate_product()">Compor Kit</button>
+                    </div>
+                </div>
+            </div>
+            <div class="quote-input-row">        
+                <div class="product-block">
+                    <div class="product-items-container">
+                        <table id="product-table">
+                            <thead>
+                                <tr>
+                                    <th>Produto <i class="bi bi-box-seam"></i></th>
+                                    <th>Filtro <i class="bi bi-filter"></i></th>
+                                    <th>Qtd <i class="bi bi-calculator"></i></th>
+                                    <th>Valor unitário <i class="bi bi-cash"></i></th>
+                                    <th>Total <i class="bi bi-cash-coin"></i></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody id="productBody" class="product-body">
+                                <tr>
+                                    <td>
+                                        <input type="text" class="quote-product-input" placeholder="Selecione um produto" onfocus="show_product_list(this); update_product_options(this.closest('tr').querySelector('.quote-category-select'))" onblur="hide_product_list(this)" onchange="sum_totals()" oninput="filter_products(this),sum_totals()" onclick="sum_totals()">
+                                        <div class="product-list" onclick="sum_totals()" onchange="sum_totals()" style="display:none;"></div>
+                                        <button class="search-product"><i class="bi bi-search"></i></button>                                       
+                                    </td>
+                                    <td>
+                                        <select class="quote-category-select"  onchange="update_product_options(this)">
+                                            <option>Todos</option>
+                                            <option>Módulos</option>
+                                            <option>Inversores</option>
+                                            <option>Estruturas </option>
+                                            <option>Cabos</option>
+                                            <option>Adicionais</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="quote-block-product-input-quantity" id="productQuantity-1" type="number" step="1" oninput="calculate_total(this),sum_totals()"  onchange="calculate_total(this), sum_totals()"></td>
+                                    <td><input class="quote-block-product-input-unit" type="number" step="0.01" oninput="calculate_total(this), sum_totals()" onchange="calculate_total(this), sum_totals()"></td>
+                                    <td><input class="quote-block-product-input-total" type="number" step="0.01" readonly></td>
+                                    <td contenteditable="false"></td>
+                                    <td><button class="block-btn-rem" onclick="remove_row(this), sum_totals()"><i class="bi bi-trash text-danger"></i></button>
+                                    </td>                
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="table-footer">
+                        <button class="block-btn" onclick="add_product_row()">
+                            <i class="bi bi-plus-circle"></i>
+
+                            Incluir item
+                        </button>
+                        <span class="quote-total-value">Total dos produtos</span>
+                        <input class="quote-block-input-total-amount" id="quote-total" type="text" oninput="calculate_final_value()" placeholder="R$ 0,00" readonly>
+                    </div>
+                </div>
+            </div>
+      
+
+           
+            <div class="quote-input-row">
+                <div class="quote-input-container">
+
+                    <div class="label-container">
+                        <label for="">Margem de Contribuição</label><br>
+                    </div>
+                    <div class="quote-input-content">
+                        <i class="bi bi-coin"></i>
+                        <input type="text" class="quote-input" placeholder="Margem de Contribuição" id="contributionMargin" value="16" oninput="is_nan_check(this),calculate_final_value(), format_rates(this)">
+                        <i class="bi bi-percent"></i>
+                    </div>
+                </div>
+
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Comissão</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-coin"></i>
+                    <input type="text" class="quote-input" placeholder="Comissão" id="comissionRate" value="3" oninput="is_nan_check(this),calculate_final_value(), format_rates(this)">
+                    <i class="bi bi-percent"></i>
+                </div>
+            </div>
+
+            
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Impostos</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-coin"></i>
+                    <input type="text" class="quote-input" placeholder="Impostos" id="taxRate" value="5" oninput="is_nan_check(this),calculate_final_value(), format_rates(this)">
+                    <i class="bi bi-percent"></i>
+                </div>
+            </div>
+
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Desconto</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-coin"></i>
+                    <input type="number" class="quote-input" min="0" max="100" placeholder="Desconto" id="discountRate" value="0" oninput="is_nan_check(this), calculate_final_value(), format_rates(this)">
+                    <i class="bi bi-percent"></i>
+                </div>
+            </div>
+            </div>
+
+            <div class="quote-input-row">
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Valor</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-cash"></i>
+                    <input type="text" class="quote-input" placeholder="Valor" id="totalValue" value="R$ 0,00" onchange="format_currency(this)">
+                </div>
+            </div>
+            </div>
+
+        
+        </div>
+        
+        </div>
+
+
+    <!-- ./ content -->
+
+    <!-- content-footer -->
+    <footer class="content-footer">
+        <div><a href="https://sunhub.app.br" target="_blank">Sunhub</a> © 2024</div>
+        <div>
+            <nav class="nav gap-4">
+                <a href="https://themeforest.net/licenses/standard" class="nav-link">Licença</a>
+                <a href="#" class="nav-link">Privacidade e termos</a>
+                <a href="#" class="nav-link">Suporte</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- ./ content-footer -->
+
+</div>
+<!-- ./ layout-wrapper -->
+
+<!-- JSpdf -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+
+<!-- JQuery -->
+<script src="../libs/jquery-3.7.1.min.js"></script>
+
+<!-- Nicescroll -->
+<script src="../libs/nicescroll.js"></script>
+
+<!-- Apex chart -->
+<script src="../libs/charts/apex/apexcharts.min.js"></script>
+
+<!-- Slick -->
+<script src="../libs/slick/slick.min.js"></script>
+
+<!-- Examples -->
+<script src="../js/examples/dashboard.js"></script>
+
+<!-- Main Javascript file -->
+<script src="../js/app.js"></script>
+
+<script>
+
+window.onload = init_auto_complete;
+
+
+        function init_auto_complete() {
+
+            const input = document.querySelector("#addressInput");
+            const autocomplete = new google.maps.places.Autocomplete(input);
+   
+
+            autocomplete.addListener("place_changed", function () {
+                const place = autocomplete.getPlace();
+                if (place && place.geometry) {
+                    console.log('Selected place:', place);
+                } else {
+                    console.log('No details available for input:', input.value);
+                }
+            });
+        }
+
+
+
+
+
+    function toogle_switch(el){
+
+        const activeClassName = '.quote-switch-container-active';
+        const inactiveClassName = '.quote-switch-container';
+        const container = el.closest('.quote-input-container-switch');
+        const switchContainer = container.querySelector('.quote-switch-container') === null ? 
+        container.querySelector(activeClassName) : container.querySelector(inactiveClassName); 
+        switchContainer.className = switchContainer.className.includes('active') ? 'quote-switch-container' : 'quote-switch-container-active';
+
+    }
+
+    function init_map() {
+        
+    let selectedPlace = ""; 
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        center: { lat: -23.304, lng: -51.169 },
+        zoom: 14,
+    });
+
+    const input = document.getElementById("pac-input");
+    const autocomplete = new google.maps.places.Autocomplete(input);
+    autocomplete.bindTo("bounds", map);
+
+    const infowindow = new google.maps.InfoWindow();
+    const marker = new google.maps.Marker({
+        map: map,
+        draggable: true, // Permite que o marcador seja arrastado
+        visible: false,
+    });
+
+    const geocoder = new google.maps.Geocoder();
+
+    autocomplete.addListener("place_changed", () => {
+        infowindow.close();
+        marker.setVisible(false);
+        const place = autocomplete.getPlace();
+
+        if (!place.geometry || !place.geometry.location) {
+            window.alert("Nenhuma informação disponível para o local selecionado");
+            return;
+        }
+
+        if (place.geometry.viewport) {
+            map.fitBounds(place.geometry.viewport);
+        } else {
+            map.setCenter(place.geometry.location);
+            map.setZoom(17); 
+        }
+
+        marker.setPosition(place.geometry.location);
+        marker.setVisible(true);
+
+        infowindow.setContent(place.name || "");
+        infowindow.open(map, marker);
+
+        selectedPlace = place.formatted_address || place.name;
+    });
+
+    map.addListener("click", (event) => {
+        const clickedLocation = event.latLng;
+        marker.setPosition(clickedLocation);
+        marker.setVisible(true);
+
+        geocoder.geocode({ location: clickedLocation }, (results, status) => {
+            if (status === "OK" && results[0]) {
+                infowindow.setContent(results[0].formatted_address);
+                infowindow.open(map, marker);
+                selectedPlace = results[0].formatted_address;
+            } else {
+                window.alert("Não foi possível encontrar um endereço para esse local.");
+            }
+        });
+    });
+
+    return () => selectedPlace;
+}
+
+function display_map() {
+    
+    let getSelectedPlace;
+
+    Swal.fire({
+        title: 'Localização da instalação',
+        html: `
+            <div class="map-addr-container">                
+                <i class="bi bi-geo-alt"></i>
+                <input id="pac-input" class="map-addr" type="text" placeholder="Digite o endereço">
+            </div>
+            <div id="map" style="width:100%; height:400px; overflow-x: hidden;"></div>
+        `,
+        showConfirmButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText: 'Escolher localização',
+        cancelButtonText: 'Cancelar',
+        width: '80%',  
+        heightAuto: false,
+        didOpen: () => {
+            getSelectedPlace = init_map();
+        },
+        preConfirm: () => {
+            const selectedAddress = getSelectedPlace();
+            if (selectedAddress) {
+                const addressInput = document.querySelector("#addressInput");
+                addressInput.value = selectedAddress; 
+                const Toast = Swal.mixin({
+
+                    toast: true,
+                    position: "top-end",
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                    didOpen: (toast) => {
+                        toast.onmouseenter = Swal.stopTimer;
+                        toast.onmouseleave = Swal.resumeTimer;
+                    }
+                });
+                
+                Toast.fire({
+                
+                    icon: "success",
+                    title: "Endereço adicionado!"
+                
+                });
+
+            } else {
+                Swal.fire('Erro', 'Nenhum endereço foi selecionado.', 'error');
+            }
+        }
+    });
+}
+
+    function show_months(el) {
+
+    const activeClassName = '.quote-switch-container-active';
+    const inactiveClassName = '.quote-switch-container';
+
+    const container = el.closest('.quote-input-container-switch');
+    const isActive = container.querySelector('.quote-switch-container') === null ? true : false;
+    if(!isActive){ //hack, fix this later.
+
+        return;
+    }
+
+
+
+    Swal.fire({
+        html: `
+            <canvas id="consumoChart" width="400" height="150"></canvas>
+            <div class="months-container">
+                <div class="month-input-container">
+                    <label>Janeiro <input id="jan" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Fevereiro <input id="feb" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Março <input id="mar" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+                
+                <div class="month-input-container">
+                    <label>Abril <input id="apr" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Maio <input id="may" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Junho <input id="jun" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Julho <input id="jul" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Agosto <input id="aug" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Setembro <input id="sep" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Outubro <input id="oct" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Novembro <input id="nov" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+
+                <div class="month-input-container">
+                    <label>Dezembro <input id="dec" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
+                </div>
+            </div>
+        `,
+        width: '80%',
+        showCancelButton: true,
+        cancelButtonText: 'Cancelar',
+        confirmButtonText: 'Salvar',
+        confirmButtonColor: "#e05809",
+        focusConfirm: false,
+        heightAuto: false,
+        didOpen: () => {
+            // Inicializando o gráfico após o modal abrir
+            const ctx = document.getElementById('consumoChart').getContext('2d');
+            window.consumoChart = new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                    datasets: [{
+                        label: 'Consumo Mensal (kWh)',
+                        data: Array(12).fill(0), // Inicialmente 0
+                        backgroundColor: '#eb722ccc',//'rgba(54, 162, 235, 0.2)',
+                        borderColor: '#eb722ccc', //'rgba(54, 162, 235, 1)',
+                        borderWidth: 1,
+                        borderRadius: 4, //  --bs-blue: #4487ebb6;
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+        }
+    });
+}
+
+function updateChart() {
+    const months = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+    const values = months.map(month => parseFloat(document.getElementById(month).value) || 0);
+
+    const total = values.reduce((acc, val) => acc + val, 0);
+    const average = parseFloat((total / 12).toFixed(2));
+    const averageConsumptionElement = document.querySelector("#averageConsumption");
+    averageConsumptionElement.value = average;
+    
+    const changeEvent = new Event('change', {
+        bubbles: true, 
+        cancelable: true 
+    });
+
+    averageConsumptionElement.dispatchEvent(changeEvent);
+
+
+    consumoChart.data.datasets[0].data = values;
+    consumoChart.update();
+}
+    
+
+    var staticCounter = 1;
+    function add_product_row() {
+
+        staticCounter++;
+        const tableBody = document.querySelector('#productBody');
+        const row = document.createElement('tr');
+
+        row.innerHTML = `
+
+                                    <td>
+                                    <input type="text" class="quote-product-input" placeholder="Selecione um produto" onfocus="show_product_list(this); update_product_options(this.closest('tr').querySelector('.quote-category-select'))" onblur="hide_product_list(this)" onchange="sum_totals()" oninput="filter_products(this), sum_totals()" onclick="sum_totals()">
+                                        <div class="product-list" onclick="sum_totals()" onchange="sum_totals()" style="display:none;"></div>
+                                        <button class="search-product"><i class="bi bi-search"></i></button>                                       
+                                    </td>
+                                    <td>
+                                        <select class="quote-category-select" onchange="update_product_options(this)">
+                                            <option>Todos</option>
+                                            <option>Módulos</option>
+                                            <option>Inversores</option>
+                                            <option>Estruturas </option>
+                                            <option>Cabos</option>
+                                            <option>Adicionais</option>
+                                        </select>
+                                    </td>
+                                    <td><input class="quote-block-product-input-quantity" type="number" step="1" oninput="sum_totals(), calculate_total(this)"  onchange="sum_totals(), calculate_total(this)"></td>
+                                    <td><input class="quote-block-product-input-unit" type="number" step="0.01" oninput="sum_totals(), calculate_total(this)" onchange="sum_totals(), calculate_total(this)"></td>
+                                    <td><input id="quote-total-${staticCounter}" class="quote-block-product-input-total" type="number" step="0.01" readonly></td>
+                                    <td contenteditable="false"></td>
+                                    <td><button class="block-btn-rem" onclick="remove_row(this), sum_totals()"><i class="bi bi-trash text-danger"></i></button>
+                                    </td>                
+
+
+        `;
+
+        tableBody.appendChild(row);
+    }
+
+
+
+    function calculate_total(input) {
+
+
+        const row = input.closest('tr');
+        const quantityElement = row.querySelector('.quote-block-product-input-quantity');
+        const unitElement = row.querySelector('.quote-block-product-input-unit');
+        const totalElement = row.querySelector('.quote-block-product-input-total');
+        
+        console.log("teste");
+
+        const quantity = quantityElement.value;
+        const unit = unitElement.value;
+        const total = parseFloat((quantity * unit).toFixed(2));
+
+        // console.log(quantity);
+        // console.log(unit);
+        // console.log(total);
+
+        totalElement.value = total;
+
+    
+    }
+
+    
+
+    function sum_totals() {
+    let total = 0;
+    const quoteTotals = document.querySelectorAll('.quote-block-product-input-total');
+
+    quoteTotals.forEach(function (quoteTotal) {
+
+        const value = parseFloat(quoteTotal.value);
+        
+        if (!isNaN(value)) {
+            total += value;
+        }
+    });
+
+    const formattedTotal = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    }).format(total);
+
+    const totalAmountInput = document.querySelector('.quote-block-input-total-amount');
+    if (totalAmountInput) {
+        totalAmountInput.value = formattedTotal; 
+    }
+
+    calculate_final_value();
+}
+
+
+
+
+
+    function calculate_final_value(){
+
+        
+        const totalProductValue = document.querySelector('.quote-block-input-total-amount').value;
+        const valueFormatted = totalProductValue.replaceAll("R$", "")
+                     .replaceAll(".", "")
+                     .replaceAll(",", ".");
+
+        const floatProductValue = parseFloat(valueFormatted);
+        const contributionMargin = parseFloat(document.getElementById('contributionMargin').value);
+        const comissionRate = parseFloat(document.getElementById('comissionRate').value);
+        const taxRate = parseFloat(document.getElementById('taxRate').value);
+        const discountRate = parseFloat(document.getElementById('discountRate').value);
+
+        const ratesTotal = contributionMargin + comissionRate + taxRate;
+        const valueAfterRates = floatProductValue + (floatProductValue * (ratesTotal/100));
+        const finalValueFloat = valueAfterRates - (valueAfterRates * (discountRate/100));
+        const finalValue = finalValueFloat.toFixed(2);
+        
+
+        const ev = new Event('change');
+        const totalValueElement = document.querySelector("#totalValue");
+
+        totalValueElement.value = finalValue;
+        totalValueElement.dispatchEvent(ev);
+
+
+    };
+
+    function format_rates(input){
+        percentageInput = input.value;
+        const formattedRate =  percentageInput > 100 ? 100 : percentageInput < 0 ? 0 : percentageInput;
+        input.value = formattedRate;
+
+    }
+
+    function is_nan_check(input) {
+    let value = parseFloat(input.value);
+  
+  if (isNaN(value)) {
+    input.value = 0;
+  } else {
+    input.value = value;
+  }
+}
+
+
+function generate_product() {
+
+    const modulesQuantityElement = document.querySelector("#modulusQuantity");
+    const productQuantityElement = document.querySelector("#productQuantity-1");
+    const modulesPowerElement = document.querySelector("#modulusPower");
+    const productNameElement = document.querySelector(".quote-product-input");
+    const productValueElement = document.querySelector(".quote-block-product-input-unit");
+    const productValueTotalElement = document.querySelector(".quote-block-product-input-total");
+
+
+    const powerValueWithW = modulesPowerElement.value;
+    const powerValue = powerValueWithW.replace('W', '');
+
+    productQuantityElement.value = modulesQuantityElement.value;
+
+    const selectedProduct = products["Módulos"].find(product => product.name.includes(powerValue));
+    
+    productNameElement.value = selectedProduct.name;
+    productValueElement.value = selectedProduct.price;
+
+    const totalSum = modulesQuantityElement.value * selectedProduct.price;
+    productValueTotalElement.value = totalSum;
+
+    sum_totals();
+}   
+
+
+
+    function update_project_percentage(input) {
+        // Adicione a lógica para atualizar a porcentagem do projeto se necessário
+    }
+
+    function remove_row(button) {
+        const row = button.closest('tr');
+        row.remove();
+    }
+
+    function change_simultaneous_rate(){
+
+const simultaneousRateElement = document.querySelector("#simultaneousRate");
+const installationTypeElement = document.querySelector("#installationType");
+
+
+const roofOrientation = installationTypeElement.value;
+
+switch(roofOrientation){
+
+    case "Residencial":
+        simultaneousRateElement.value = 30;
+        break;
+    case "Comercial":
+        simultaneousRateElement.value = 60;
+        break;
+    case "Rural":
+        simultaneousRateElement.value = 35;
+        break;
+    case "Industrial":
+        simultaneousRateElement.value = 80;
+        break;
+    default:
+        simultaneousRateElement.value = 0;
+        break;
+    }
+}
+
+function generation_month_to_month(){
+
+
+const irradiationValue = parseFloat(document.querySelector("#irradiationValue").value); 
+const irradiationList = "5,84;5,71;5,26;4,63;3,66;3,37;3,58;4,54;4,7;5,26;6;6,26;4,9" //irradiação de londrina mes a mes
+const performanceRate = parseFloat(document.querySelector("#performanceRate").value); 
+const adequatePower = parseFloat(document.querySelector("#adequatePower").value); 
+const newList = irradiationList.replaceAll(",", ".");
+
+var value = 0;
+var GeracaoSistema = 0;
+var StringGeracaoConcatenada = "";
+
+for(let z = 0; z < newList.length; z++){
+
+    value = newList.split(";")[z];
+    if(!value || value == "NaN") break;
+    GeracaoSistema = parseFloat(value * adequatePower  * performanceRate* 30).toFixed(2);
+    StringGeracaoConcatenada += GeracaoSistema + ";";
+
+}
+
+
+return StringGeracaoConcatenada.split(';');
+}
+
+
+function get_month_values() {
+    const monthValues = Array.from(document.querySelectorAll('.month-input')).map(input => parseFloat(input.value) || 0);
+    console.log(monthValues);
+    return monthValues;
+}
+
+get_month_values();
+
+
+
+function generate_chart(){
+    
+const fillEveryMonth = document.querySelector("#MonthToMonthButton");
+const switchChecker = fillEveryMonth.className.includes('active') ? true : false;
+const adequatePower = parseFloat(document.querySelector("#adequatePower").value); 
+const performanceRate = parseFloat(document.querySelector("#performanceRate").value); 
+const irradiationValue = parseFloat(document.querySelector("#irradiationValue").value); 
+const generation = generation_month_to_month();
+const averageConsumption = parseFloat(document.querySelector("#averageConsumption").value); 
+
+let consumption = get_month_values();
+console.log(consumption);
+
+
+ const averageArray = new Array(12).fill(averageConsumption);
+
+encodeChartUrl();
+
+
+ function encodeChartUrl() {
+   const chartData = {
+     type: 'bar',
+     data: {
+       labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+       datasets: [
+         {
+           label: 'Consumo',
+           data: switchChecker ? consumption : averageArray,
+           backgroundColor: '#494997'
+         },
+         {
+           label: 'Geração',
+           data: generation,
+           backgroundColor: '#5b9955'
+         }
+       ]
+     }
+   };
+
+   const chartDataString = JSON.stringify(chartData);
+
+   const encodedChartData = encodeURIComponent(chartDataString);
+
+   const chartUrl = `https://quickchart.io/chart?bkg=white&c=${encodedChartData}`;
+
+   return chartUrl;
+
+ }
+
+ console.log(encodeChartUrl());
+
+ 
+
+ }
+
+ async function request_quote_HTML(){
+
+const response = await fetch('./sunquote.html');
+const data = await response.text();
+const sampleDiv = document.getElementById('sample-quote')
+sampleDiv.innerHTML = data;
+return sampleDiv;
+
+}
+
+document.getElementById('download').addEventListener('click', async function() {
+const { jsPDF } = window.jspdf;
+const doc = new jsPDF();            
+const content = await request_quote_HTML();
+
+html2canvas(content).then(function(canvas) {
+
+    const imgData = canvas.toDataURL('image/png');                
+    doc.addImage(imgData, 'PNG', 10, 10);                
+    doc.save('document.pdf');
+});
+});
+
+
+</script>
+
+</body>
+</html>
