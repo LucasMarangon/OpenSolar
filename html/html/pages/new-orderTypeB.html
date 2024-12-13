@@ -1897,35 +1897,7 @@ encodeChartUrl();
  }
 
  console.log(encodeChartUrl());
-
- 
-
- }
-
- async function request_quote_HTML(){
-
-const response = await fetch('./sunquote.html');
-const data = await response.text();
-const sampleDiv = document.getElementById('sample-quote')
-sampleDiv.innerHTML = data;
-return sampleDiv;
-
 }
-
-document.getElementById('download').addEventListener('click', async function() {
-const { jsPDF } = window.jspdf;
-const doc = new jsPDF();            
-const content = await request_quote_HTML();
-
-html2canvas(content).then(function(canvas) {
-
-    const imgData = canvas.toDataURL('image/png');                
-    doc.addImage(imgData, 'PNG', 10, 10);                
-    doc.save('document.pdf');
-});
-});
-
-
 </script>
 
 </body>

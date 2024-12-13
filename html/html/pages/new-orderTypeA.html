@@ -728,7 +728,7 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                 </div>
             </li>
             <li class="nav-item ms-3">
-                    <button class="btn btn-primary btn-icon">
+                    <button class="btn btn-primary btn-icon" onclick="request_quote_HTML()">
                         <strong><i class="bi bi-floppy"></i></strong>
                         <strong>Salvar</strong>
     </button>
@@ -772,19 +772,28 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                         </button>
                     </div>
                 </div>
+
                 <div class="quote-input-container">
                     <div class="label-container">
-                        <label for="">Grupo</label><br>
+                        <label for="">Taxa de Irradiação</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-sun"></i>
+                        <input type="number" class="quote-input" id="irradiationValue" value="4.9">
+                    </div>
+                </div>
+                <!-- <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Modalidade</label><br>
                     </div>
                     <div class="quote-input-content">
                         <i class="bi bi-lightning-charge"></i>                    
                         <select class="quote-select">
-                            <option>Grupo de consumo</option>
-                            <option>Grupo A - Alta tensão</option>
-                            <option>Grupo B - Baixa tensão</option>
+                            <option>Convencional</option>
+                            <option>Branca</option>
                         </select>
                     </div>
-                </div>
+                </div>  Div pronta caso precise recolocar esse campo na proposta.  -->
                 <div class="quote-input-container">
                     <div class="label-container">
                         <label for="">Orientação do telhado</label><br>
@@ -812,6 +821,7 @@ uma pessoa anexou um arquivo em seu cliente                                    <
 
             </div>
 
+
             <div class="quote-input-row">
                 <div class="quote-input-container">
                     <div class="label-container">
@@ -821,9 +831,158 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                     <i class="bi bi-lightbulb"></i>                    
                         <select class="quote-select" id="energyDealership" onchange="change_fees()">
                             <option>Selecione</option>
+                            <option>Amazonas Energia</option>
+                            <option>Castro-DIS</option>
+                            <option>CEA Equatorial</option>
+                            <option>Cedrap</option>
+                            <option>Cedri</option>
+                            <option>CEEE Equatorial</option>
+                            <option>CEGERO</option>
+                            <option>Cejama</option>
+                            <option>Celesc-DIS</option>
+                            <option>CELETRO</option>
+                            <option>Cemig-D</option>
+                            <option>Cemirim</option>
+                            <option>Ceprag</option>
+                            <option>Ceraça</option>
+                            <option>Ceral Anitápolis</option>
+                            <option>Ceral Araruama</option>
+                            <option>Ceral DIS</option>
+                            <option>Cerbranorte</option>
+                            <option>CERCI</option>
+                            <option>Cercos</option>
+                            <option>Cerej</option>
+                            <option>Ceres</option>
+                            <option>CERFOX</option>
+                            <option>Cergal</option>
+                            <option>Cergapa</option>
+                            <option>Cergral</option>
+                            <option>Ceriluz</option>
+                            <option>Cerim</option>
+                            <option>Ceripa</option>
+                            <option>Ceris</option>
+                            <option>CERMC</option>
+                            <option>Cermissões</option>
+                            <option>Cermoful</option>
+                            <option>Cernhe</option>
+                            <option>Cerpalo</option>
+                            <option>Cerpro</option>
+                            <option>CERRP</option>
+                            <option>Cersad</option>
+                            <option>Cersul</option>
+                            <option>Certaja</option>
+                            <option>Certel</option>
+                            <option>CERTHIL</option>
+                            <option>Certrel</option>
+                            <option>CERVAM</option>
+                            <option>Cetril</option>
+                            <option>Chesp</option>
+                            <option>Cocel</option>
+                            <option>Codesam</option>
+                            <option>Coopera</option>
+                            <option>Cooperaliança</option>
+                            <option>Coopercocal</option>
+                            <option>Cooperluz</option>
+                            <option>Coopermila</option>
+                            <option>COOPERNORTE</option>
+                            <option>COOPERSUL</option>
+                            <option>COOPERZEM</option>
+                            <option>Coorsel</option>
                             <option>Copel-DIS</option>
-                            <option>Celesc</option>
-                            <option>CPFL</option>
+                            <option>Coprel</option>
+                            <option>CPFL Paulista</option>
+                            <option>CPFL Piratininga</option>
+                            <option>CPFL Santa Cruz (agrupada)</option>
+                            <option>Creluz-D</option>
+                            <option>Creral</option>
+                            <option>Dcelt</option>
+                            <option>Demei</option>
+                            <option>DMED</option>
+                            <option>EDP ES</option>
+                            <option>EDP SP</option>
+                            <option>EFLJC</option>
+                            <option>Eflul</option>
+                            <option>Eletrocar</option>
+                            <option>ELFSM</option>
+                            <option>Enel CE</option>
+                            <option>Enel GO</option>
+                            <option>Enel RJ</option>
+                            <option>Enel SP</option>
+                            <option>Energisa AC</option>
+                            <option>Energisa Borborema</option>
+                            <option>Energisa MG</option>
+                            <option>Energisa MS</option>
+                            <option>Energisa MT</option>
+                            <option>Energisa Nova Friburgo</option>
+                            <option>Energisa PB</option>
+                            <option>Energisa RO</option>
+                            <option>Energisa SE</option>
+                            <option>Energisa TO</option>
+                            <option>Equatorial AL</option>
+                            <option>Equatorial MA</option>
+                            <option>Equatorial PA</option>
+                            <option>Equatorial PI</option>
+                            <option>Equatorial RN</option>
+                            <option>Equatorial SC</option>
+                            <option>Equatorial SA</option>
+                            <option>ESE</option>
+                            <option>Furnas</option>
+                            <option>Germano</option>
+                            <option>Gerusa</option>
+                            <option>Gesel</option>
+                            <option>Gerop</option>
+                            <option>Getel</option>
+                            <option>GVE</option>
+                            <option>Igreja Nova</option>
+                            <option>Iguaçu</option>
+                            <option>Imepac</option>
+                            <option>Imet</option>
+                            <option>Independente</option>
+                            <option>Itaipu</option>
+                            <option>JUPI</option>
+                            <option>Lerner</option>
+                            <option>Luzh</option>
+                            <option>Luzplan</option>
+                            <option>Luzvivo</option>
+                            <option>Luzmar</option>
+                            <option>Magau</option>
+                            <option>Metropar</option>
+                            <option>Miracema</option>
+                            <option>Monassu</option>
+                            <option>Monte Alto</option>
+                            <option>Mundaka</option>
+                            <option>Norte Fluminense</option>
+                            <option>Nordeste</option>
+                            <option>Norte Maranhao</option>
+                            <option>Parana</option>
+                            <option>Paranapanema</option>
+                            <option>Piauí</option>
+                            <option>Planalto</option>
+                            <option>Porto Real</option>
+                            <option>PPM</option>
+                            <option>Pampa</option>
+                            <option>Prata</option>
+                            <option>Rio Claro</option>
+                            <option>S. Antonio Energia</option>
+                            <option>Santa Cruz</option>
+                            <option>São Gabriel</option>
+                            <option>São João</option>
+                            <option>São Miguel</option>
+                            <option>São Paulo</option>
+                            <option>Serrana</option>
+                            <option>Sevale</option>
+                            <option>Soma</option>
+                            <option>Sudoeste</option>
+                            <option>Sulgipe</option>
+                            <option>Sudeste</option>
+                            <option>Sudoeste Capixaba</option>
+                            <option>Santos Dumont</option>
+                            <option>Suldeste</option>
+                            <option>Tocantins</option>
+                            <option>Vale do Paraíba</option>
+                            <option>Vallon</option>
+                            <option>Vermelha</option>
+                            <option>Viana</option>
                         </select>
                     </div>
                 </div>
@@ -833,13 +992,23 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                     </div>
                     <div class="quote-input-content">                    
                         <i class="bi bi-wrench"></i>                    
-                        <select class="quote-select">
+                        <select onchange="change_simultaneous_rate()" id="installationType" class="quote-select">
                             <option>Selecione</option>
                             <option>Residencial</option>
                             <option>Comercial</option>
                             <option>Rural</option>
                             <option>Industrial</option>
                         </select>
+                    </div>
+                </div>
+                <div class="quote-input-container">
+                    <div class="label-container">
+                        <label for="">Taxa de Simultaneidade</label><br>
+                    </div>
+                    <div class="quote-input-content">                    
+                        <i class="bi bi-bar-chart"></i>
+                        <input type="number" class="quote-input" id="simultaneousRate" placeholder="0">
+                        <i class="bi bi-percent"></i>
                     </div>
                 </div>
                 <div class="quote-input-container">
@@ -861,6 +1030,9 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                     </div>
                 </div>
 
+              
+            </div>
+            <div class="quote-input-row">
                 <div class="quote-input-container">
                     <div class="label-container">
                         <label for="">Padrão de entrada</label><br>
@@ -876,8 +1048,6 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                         </select>
                     </div>
                 </div>
-            </div>
-            <div class="quote-input-row">
                 <div class="quote-input-container">
                     <div class="label-container">
                         <label for="">Iluminação pública</label><br>
@@ -905,37 +1075,40 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                         <input type="text" class="quote-input" placeholder="R$ 0,00" id="tusdFIOB" oninput="format_currency(this)">
                     </div>
                 </div>
+                
+            </div>
+
+            <div class="quote-input-row">
                 <div class="quote-input-container">
                     <div class="label-container">
-                        <label for="">Custos adicionais</label><br>
+                        <label for="">Custos adicionais da Fatura</label><br>
                     </div>
                     <div class="quote-input-content">                    
                         <i class="bi bi-cash-stack"></i>
                         <input type="text" class="quote-input" placeholder="R$ 0,00" oninput="format_currency(this)">
                     </div>
                 </div>
-            </div>
-
-            <div class="quote-input-row">
+                
+                
                 <div class="quote-input-container">
                     <div class="label-container">
                         <label for="">Consumo médio mensal</label><br>
                     </div>
                     <div class="quote-input-content">                    
                         <i class="bi bi-battery-charging"></i>
-                        <input type="number" class="quote-input" id="averageConsumption" placeholder="kWh" onchange="calculate_power(this)" oninput="calculate_power(this)">
+                        <input type="number" class="quote-input" id="averageConsumption" placeholder="kWh" onchange="calculate_power(this), generate_chart()" oninput="calculate_power(this)">
                     </div>
                 </div>
                 <div class="quote-input-container-switch">
                     <span class="switch-text">Preencher mês a mês?</span>
-                    <div class="quote-switch-container" onclick="toogle_switch(this); show_months(this);">
+                    <div class="quote-switch-container" id="MonthToMonthButton" onclick="toogle_switch(this); show_months(this)">
                         <div class="quote-switch-circle" id="inactive-switch"></div>
                     </div>
                 </div>
-                <div class="quote-input-container" style="box-shadow: none; border: none;">
+                <div class="quote-input-container-switch">
+                    <span></span>
                 </div>
-                <div class="quote-input-container" style="box-shadow: none; border: none;">
-                </div>
+
 
             </div>
         
@@ -982,7 +1155,7 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                         <label for=""></label><br>
                     </div>
                     <div class="quote-input-content" style="border: none; box-shadow: none;">                    
-                        <button class="quote-button">Compor Kit</button>
+                        <button class="quote-button" onclick="generate_product()">Compor Kit</button>
                     </div>
                 </div>
             </div>
@@ -1003,8 +1176,8 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                             <tbody id="productBody" class="product-body">
                                 <tr>
                                     <td>
-                                        <input type="text" class="quote-product-input" placeholder="Selecione um produto" onfocus="show_product_list(this); update_product_options(this.closest('tr').querySelector('.quote-category-select'))" onblur="hide_product_list(this)" oninput="filter_products(this)">
-                                        <div class="product-list" style="display:none;"></div>
+                                        <input type="text" class="quote-product-input" placeholder="Selecione um produto" onfocus="show_product_list(this); update_product_options(this.closest('tr').querySelector('.quote-category-select'))" onblur="hide_product_list(this)" onchange="sum_totals()" oninput="filter_products(this),sum_totals()" onclick="sum_totals()">
+                                        <div class="product-list" onclick="sum_totals()" onchange="sum_totals()" style="display:none;"></div>
                                         <button class="search-product"><i class="bi bi-search"></i></button>                                       
                                     </td>
                                     <td>
@@ -1017,11 +1190,11 @@ uma pessoa anexou um arquivo em seu cliente                                    <
                                             <option>Adicionais</option>
                                         </select>
                                     </td>
-                                    <td><input class="quote-block-product-input-quantity" type="number" step="1" oninput="calculate_total(this)"  onchange="calculate_total(this)"></td>
-                                    <td><input class="quote-block-product-input-unit" type="number" step="0.01" oninput="calculate_total(this)" onchange="calculate_total(this)"></td>
+                                    <td><input class="quote-block-product-input-quantity" id="productQuantity-1" type="number" step="1" oninput="calculate_total(this),sum_totals()"  onchange="calculate_total(this), sum_totals()"></td>
+                                    <td><input class="quote-block-product-input-unit" type="number" step="0.01" oninput="calculate_total(this), sum_totals()" onchange="calculate_total(this), sum_totals()"></td>
                                     <td><input class="quote-block-product-input-total" type="number" step="0.01" readonly></td>
                                     <td contenteditable="false"></td>
-                                    <td><button class="block-btn-rem" onclick="remove_row(this)"><i class="bi bi-trash text-danger"></i></button>
+                                    <td><button class="block-btn-rem" onclick="remove_row(this), sum_totals()"><i class="bi bi-trash text-danger"></i></button>
                                     </td>                
                                 </tr>
                             </tbody>
@@ -1033,24 +1206,77 @@ uma pessoa anexou um arquivo em seu cliente                                    <
 
                             Incluir item
                         </button>
-                        <span class="quote-total-value">Valor total</span>
-                        <input class="quote-block-input-total-amount" id="quote-total" type="number">
-
+                        <span class="quote-total-value">Total dos produtos</span>
+                        <input class="quote-block-input-total-amount" id="quote-total" type="text" oninput="calculate_final_value()" placeholder="R$ 0,00" readonly>
                     </div>
                 </div>
             </div>
+      
+
+           
             <div class="quote-input-row">
-                <div class="quote-input-container-switch">
-                    <span class="switch-text">Inserir custos detalhados?</span>
-                    <div class="quote-switch-container"  onclick="toogle_switch(this);">
-                        <div class="quote-switch-circle" id="inactive-switch"></div>
+                <div class="quote-input-container">
+
+                    <div class="label-container">
+                        <label for="">Margem de Contribuição</label><br>
+                    </div>
+                    <div class="quote-input-content">
+                        <i class="bi bi-coin"></i>
+                        <input type="text" class="quote-input" placeholder="Margem de Contribuição" id="contributionMargin" value="16" oninput="is_nan_check(this),calculate_final_value(), format_rates(this)">
+                        <i class="bi bi-percent"></i>
                     </div>
                 </div>
+
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Comissão</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-coin"></i>
+                    <input type="text" class="quote-input" placeholder="Comissão" id="comissionRate" value="3" oninput="is_nan_check(this),calculate_final_value(), format_rates(this)">
+                    <i class="bi bi-percent"></i>
+                </div>
             </div>
-
-
 
             
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Impostos</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-coin"></i>
+                    <input type="text" class="quote-input" placeholder="Impostos" id="taxRate" value="5" oninput="is_nan_check(this),calculate_final_value(), format_rates(this)">
+                    <i class="bi bi-percent"></i>
+                </div>
+            </div>
+
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Desconto</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-coin"></i>
+                    <input type="number" class="quote-input" min="0" max="100" placeholder="Desconto" id="discountRate" value="0" oninput="is_nan_check(this), calculate_final_value(), format_rates(this)">
+                    <i class="bi bi-percent"></i>
+                </div>
+            </div>
+            </div>
+
+            <div class="quote-input-row">
+            <div class="quote-input-container">
+                <div class="label-container">
+                    <label for="">Valor</label><br>
+                </div>
+                <div class="quote-input-content">
+                    <i class="bi bi-cash"></i>
+                    <input type="text" class="quote-input" placeholder="Valor" id="totalValue" value="R$ 0,00" onchange="format_currency(this)">
+                </div>
+            </div>
+            </div>
+
+        
+        </div>
+        
         </div>
 
 
@@ -1071,6 +1297,12 @@ uma pessoa anexou um arquivo em seu cliente                                    <
 
 </div>
 <!-- ./ layout-wrapper -->
+
+<!-- JSpdf -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>    
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
 
 <!-- JQuery -->
 <script src="../libs/jquery-3.7.1.min.js"></script>
@@ -1267,51 +1499,51 @@ function display_map() {
             <canvas id="consumoChart" width="400" height="150"></canvas>
             <div class="months-container">
                 <div class="month-input-container">
-                    <label>Janeiro <input id="jan" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Janeiro <input id="jan" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Fevereiro <input id="feb" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Fevereiro <input id="feb" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Março <input id="mar" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Março <input id="mar" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
                 
                 <div class="month-input-container">
-                    <label>Abril <input id="apr" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Abril <input id="apr" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Maio <input id="may" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Maio <input id="may" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Junho <input id="jun" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Junho <input id="jun" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Julho <input id="jul" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Julho <input id="jul" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Agosto <input id="aug" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Agosto <input id="aug" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Setembro <input id="sep" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Setembro <input id="sep" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Outubro <input id="oct" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Outubro <input id="oct" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Novembro <input id="nov" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Novembro <input id="nov" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
 
                 <div class="month-input-container">
-                    <label>Dezembro <input id="dec" type="number" step="0.01" min="0" class="month-input" oninput="updateChart()"></label>
+                    <label>Dezembro <input id="dec" type="number" step="0.01" min="0" class="month-input" oninput="updateChart(),generate_chart()"></label>
                 </div>
             </div>
         `,
@@ -1370,17 +1602,20 @@ function updateChart() {
     consumoChart.data.datasets[0].data = values;
     consumoChart.update();
 }
+    
 
+    var staticCounter = 1;
     function add_product_row() {
 
+        staticCounter++;
         const tableBody = document.querySelector('#productBody');
         const row = document.createElement('tr');
 
         row.innerHTML = `
 
                                     <td>
-                                        <input type="text" class="quote-product-input" placeholder="Selecione um produto" onblur="hide_product_list(this)" onfocus="show_product_list(this); update_product_options(this.closest('tr').querySelector('.quote-category-select'))" oninput="filter_products(this)">
-                                        <div class="product-list" style="display:none;"></div>
+                                    <input type="text" class="quote-product-input" placeholder="Selecione um produto" onfocus="show_product_list(this); update_product_options(this.closest('tr').querySelector('.quote-category-select'))" onblur="hide_product_list(this)" onchange="sum_totals()" oninput="filter_products(this), sum_totals()" onclick="sum_totals()">
+                                        <div class="product-list" onclick="sum_totals()" onchange="sum_totals()" style="display:none;"></div>
                                         <button class="search-product"><i class="bi bi-search"></i></button>                                       
                                     </td>
                                     <td>
@@ -1393,11 +1628,11 @@ function updateChart() {
                                             <option>Adicionais</option>
                                         </select>
                                     </td>
-                                    <td><input class="quote-block-product-input-quantity" type="number" step="1" oninput="calculate_total(this)"  onchange="calculate_total(this)"></td>
-                                    <td><input class="quote-block-product-input-unit" type="number" step="0.01" oninput="calculate_total(this)" onchange="calculate_total(this)"></td>
-                                    <td><input class="quote-block-product-input-total" type="number" step="0.01" readonly></td>
+                                    <td><input class="quote-block-product-input-quantity" type="number" step="1" oninput="sum_totals(), calculate_total(this)"  onchange="sum_totals(), calculate_total(this)"></td>
+                                    <td><input class="quote-block-product-input-unit" type="number" step="0.01" oninput="sum_totals(), calculate_total(this)" onchange="sum_totals(), calculate_total(this)"></td>
+                                    <td><input id="quote-total-${staticCounter}" class="quote-block-product-input-total" type="number" step="0.01" readonly></td>
                                     <td contenteditable="false"></td>
-                                    <td><button class="block-btn-rem" onclick="remove_row(this)"><i class="bi bi-trash text-danger"></i></button>
+                                    <td><button class="block-btn-rem" onclick="remove_row(this), sum_totals()"><i class="bi bi-trash text-danger"></i></button>
                                     </td>                
 
 
@@ -1405,6 +1640,8 @@ function updateChart() {
 
         tableBody.appendChild(row);
     }
+
+
 
     function calculate_total(input) {
 
@@ -1414,19 +1651,126 @@ function updateChart() {
         const unitElement = row.querySelector('.quote-block-product-input-unit');
         const totalElement = row.querySelector('.quote-block-product-input-total');
         
+        console.log("teste");
 
         const quantity = quantityElement.value;
         const unit = unitElement.value;
         const total = parseFloat((quantity * unit).toFixed(2));
 
-        console.log(quantity);
-        console.log(unit);
-        console.log(total);
+        // console.log(quantity);
+        // console.log(unit);
+        // console.log(total);
 
         totalElement.value = total;
 
     
     }
+
+    
+
+    function sum_totals() {
+    let total = 0;
+    const quoteTotals = document.querySelectorAll('.quote-block-product-input-total');
+
+    quoteTotals.forEach(function (quoteTotal) {
+
+        const value = parseFloat(quoteTotal.value);
+        
+        if (!isNaN(value)) {
+            total += value;
+        }
+    });
+
+    const formattedTotal = new Intl.NumberFormat('pt-BR', {
+        style: 'currency',
+        currency: 'BRL',
+    }).format(total);
+
+    const totalAmountInput = document.querySelector('.quote-block-input-total-amount');
+    if (totalAmountInput) {
+        totalAmountInput.value = formattedTotal; 
+    }
+
+    calculate_final_value();
+}
+
+
+
+
+
+    function calculate_final_value(){
+
+        
+        const totalProductValue = document.querySelector('.quote-block-input-total-amount').value;
+        const valueFormatted = totalProductValue.replaceAll("R$", "")
+                     .replaceAll(".", "")
+                     .replaceAll(",", ".");
+
+        const floatProductValue = parseFloat(valueFormatted);
+        const contributionMargin = parseFloat(document.getElementById('contributionMargin').value);
+        const comissionRate = parseFloat(document.getElementById('comissionRate').value);
+        const taxRate = parseFloat(document.getElementById('taxRate').value);
+        const discountRate = parseFloat(document.getElementById('discountRate').value);
+
+        const ratesTotal = contributionMargin + comissionRate + taxRate;
+        const valueAfterRates = floatProductValue + (floatProductValue * (ratesTotal/100));
+        const finalValueFloat = valueAfterRates - (valueAfterRates * (discountRate/100));
+        const finalValue = finalValueFloat.toFixed(2);
+        
+
+        const ev = new Event('change');
+        const totalValueElement = document.querySelector("#totalValue");
+
+        totalValueElement.value = finalValue;
+        totalValueElement.dispatchEvent(ev);
+
+
+    };
+
+    function format_rates(input){
+        percentageInput = input.value;
+        const formattedRate =  percentageInput > 100 ? 100 : percentageInput < 0 ? 0 : percentageInput;
+        input.value = formattedRate;
+
+    }
+
+    function is_nan_check(input) {
+    let value = parseFloat(input.value);
+  
+  if (isNaN(value)) {
+    input.value = 0;
+  } else {
+    input.value = value;
+  }
+}
+
+
+function generate_product() {
+
+    const modulesQuantityElement = document.querySelector("#modulusQuantity");
+    const productQuantityElement = document.querySelector("#productQuantity-1");
+    const modulesPowerElement = document.querySelector("#modulusPower");
+    const productNameElement = document.querySelector(".quote-product-input");
+    const productValueElement = document.querySelector(".quote-block-product-input-unit");
+    const productValueTotalElement = document.querySelector(".quote-block-product-input-total");
+
+
+    const powerValueWithW = modulesPowerElement.value;
+    const powerValue = powerValueWithW.replace('W', '');
+
+    productQuantityElement.value = modulesQuantityElement.value;
+
+    const selectedProduct = products["Módulos"].find(product => product.name.includes(powerValue));
+    
+    productNameElement.value = selectedProduct.name;
+    productValueElement.value = selectedProduct.price;
+
+    const totalSum = modulesQuantityElement.value * selectedProduct.price;
+    productValueTotalElement.value = totalSum;
+
+    sum_totals();
+}   
+
 
 
     function update_project_percentage(input) {
@@ -1438,7 +1782,122 @@ function updateChart() {
         row.remove();
     }
 
+    function change_simultaneous_rate(){
 
+const simultaneousRateElement = document.querySelector("#simultaneousRate");
+const installationTypeElement = document.querySelector("#installationType");
+
+
+const roofOrientation = installationTypeElement.value;
+
+switch(roofOrientation){
+
+    case "Residencial":
+        simultaneousRateElement.value = 30;
+        break;
+    case "Comercial":
+        simultaneousRateElement.value = 60;
+        break;
+    case "Rural":
+        simultaneousRateElement.value = 35;
+        break;
+    case "Industrial":
+        simultaneousRateElement.value = 80;
+        break;
+    default:
+        simultaneousRateElement.value = 0;
+        break;
+    }
+}
+
+function generation_month_to_month(){
+
+
+const irradiationValue = parseFloat(document.querySelector("#irradiationValue").value); 
+const irradiationList = "5,84;5,71;5,26;4,63;3,66;3,37;3,58;4,54;4,7;5,26;6;6,26;4,9" //irradiação de londrina mes a mes
+const performanceRate = parseFloat(document.querySelector("#performanceRate").value); 
+const adequatePower = parseFloat(document.querySelector("#adequatePower").value); 
+const newList = irradiationList.replaceAll(",", ".");
+
+var value = 0;
+var GeracaoSistema = 0;
+var StringGeracaoConcatenada = "";
+
+for(let z = 0; z < newList.length; z++){
+
+    value = newList.split(";")[z];
+    if(!value || value == "NaN") break;
+    GeracaoSistema = parseFloat(value * adequatePower  * performanceRate* 30).toFixed(2);
+    StringGeracaoConcatenada += GeracaoSistema + ";";
+
+}
+
+
+return StringGeracaoConcatenada.split(';');
+}
+
+
+function get_month_values() {
+    const monthValues = Array.from(document.querySelectorAll('.month-input')).map(input => parseFloat(input.value) || 0);
+    console.log(monthValues);
+    return monthValues;
+}
+
+get_month_values();
+
+
+
+function generate_chart(){
+    
+const fillEveryMonth = document.querySelector("#MonthToMonthButton");
+const switchChecker = fillEveryMonth.className.includes('active') ? true : false;
+const adequatePower = parseFloat(document.querySelector("#adequatePower").value); 
+const performanceRate = parseFloat(document.querySelector("#performanceRate").value); 
+const irradiationValue = parseFloat(document.querySelector("#irradiationValue").value); 
+const generation = generation_month_to_month();
+const averageConsumption = parseFloat(document.querySelector("#averageConsumption").value); 
+
+let consumption = get_month_values();
+console.log(consumption);
+
+
+ const averageArray = new Array(12).fill(averageConsumption);
+
+encodeChartUrl();
+
+
+ function encodeChartUrl() {
+   const chartData = {
+     type: 'bar',
+     data: {
+       labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+       datasets: [
+         {
+           label: 'Consumo',
+           data: switchChecker ? consumption : averageArray,
+           backgroundColor: '#494997'
+         },
+         {
+           label: 'Geração',
+           data: generation,
+           backgroundColor: '#5b9955'
+         }
+       ]
+     }
+   };
+
+   const chartDataString = JSON.stringify(chartData);
+
+   const encodedChartData = encodeURIComponent(chartDataString);
+
+   const chartUrl = `https://quickchart.io/chart?bkg=white&c=${encodedChartData}`;
+
+   return chartUrl;
+
+ }
+
+ console.log(encodeChartUrl());
+}
 </script>
 
 </body>
